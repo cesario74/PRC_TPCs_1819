@@ -1,0 +1,24 @@
+extends layout
+block content
+          header.w3-header.w3-green
+              h1.w3-center 
+                  b Queries para o GraphDB
+          .w3-container
+            fieldset
+              legend
+                b= rep
+              .w3-bar-block
+                .w3-bar-item
+                  form.w3-container(method="POST" action="/input/"+rep)
+                    textarea.w3-border(rows="5" cols="25" class="w3-input" placeholder="Escrever Query..." name="text" id="text")
+                    br
+                    button.w3-button.w3-green(type="submit",name="proc") Submeter
+                    br
+                    br
+                    button.w3-button.w3-green(type="submit",id="newQuery") Nova Query
+          br
+          p
+            a(style='text-decoration: none' href='/')
+              |Regressar á página inicial 
+          footer.w3-container.w3-green(id='footer')
+              address GraphDB - MyApp by cp74

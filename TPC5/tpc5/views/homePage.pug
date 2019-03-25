@@ -1,0 +1,26 @@
+extends layout
+block content
+        header.w3-header.w3-green
+            h1.w3-center 
+                b GraphDB - MyApp 
+        .w3-container
+            .w3-row
+                .w3-col.m6.l3
+                    h2
+                        b Repositórios GraphDB
+                .w3-col.m6.m4    
+                    table.w3-center.w3-table-all
+                        tr
+                            th Repositórios
+                            th Tamanho
+                        each r in repo
+                            tr
+                                td
+                                    b
+                                        a(href='/input/' + r.id)= r.id
+                                td= r.tamanho
+            br
+        footer.w3-container.w3-green(id='footer')
+            address GraphDB - MyApp by cp74
+        
+  
